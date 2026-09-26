@@ -105,3 +105,6 @@
  GET / 200 in 76ms (next.js: 17ms, application-code: 59ms)
 ✓ Compiled in 204ms
  GET / 200 in 63ms (next.js: 14ms, application-code: 50ms)
+✓ Compiled in 251ms
+ GET / 200 in 176ms (next.js: 14ms, application-code: 162ms)
+ GET / 200 in 249ms (next.js: 12ms, application-code: 237ms)
