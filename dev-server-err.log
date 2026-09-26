@@ -1,0 +1,30 @@
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: CallNowButton is not defined
+    at eval (components\Services.tsx:104:20)
+    at Array.map (<anonymous>)
+    at Services (components\Services.tsx:64:21)
+  102 |                 {/* Emergency strip opens its dedicated call card. */}
+  103 |                 {i === 6 && (
+> 104 |                   <CallNowButton
+      |                    ^
+  105 |                     mode="emergency"
+  106 |                     aria-label={`Call emergency line on ${contact.phonePrimary}`}
+  107 |                     className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-dark" {
+  digest: '3359669757'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: tel is not defined
+    at eval (components\Services.tsx:106:27)
+    at Array.map (<anonymous>)
+    at Services (components\Services.tsx:65:21)
+  104 |                 {i === 6 && (
+  105 |                   <a
+> 106 |                     href={tel(contact.phonePrimary)}
+      |                           ^
+  107 |                     aria-label={`Call emergency line on ${contact.phonePrimary}`}
+  108 |                     className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-dark"
+  109 |                   > {
+  digest: '4061829890'
+}

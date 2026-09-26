@@ -1,0 +1,43 @@
+
+> sri-sakthi-hospital@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.47:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 10.3s (1608 modules)
+ GET / 200 in 12820ms
+ GET / 200 in 364ms
+ ○ Compiling /doctor ...
+ ✓ Compiled /doctor in 1135ms (1622 modules)
+ GET /doctor 200 in 1913ms
+ GET / 200 in 108ms
+ ✓ Compiled /hospital in 472ms (1613 modules)
+ GET /hospital 200 in 1042ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 537ms (1623 modules)
+ GET /services 200 in 976ms
+ ✓ Compiled in 2.5s (1617 modules)
+ GET / 200 in 326ms
+ GET / 500 in 615ms
+ ✓ Compiled in 2.6s (1617 modules)
+ GET / 200 in 1457ms
+ ✓ Compiled in 757ms (1617 modules)
+ GET / 500 in 854ms
+ ✓ Compiled in 899ms (1617 modules)
+ GET / 200 in 562ms
+ ○ Compiling /doctor ...
+ ✓ Compiled /doctor in 720ms (900 modules)
+ GET /doctor 200 in 1195ms
+ ✓ Compiled /hospital in 245ms (904 modules)
+ GET /hospital 200 in 809ms
+ ✓ Compiled /services in 324ms (911 modules)
+ GET /services 200 in 734ms
+ GET / 200 in 464ms
+ GET / 200 in 481ms
+ GET / 200 in 478ms
+ GET / 200 in 481ms
