@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
@@ -85,12 +85,12 @@ export default function Appointment() {
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="grid gap-8 overflow-hidden rounded-[2.25rem] border border-line bg-white p-3 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_24px_60px_-30px_rgba(232,117,36,0.3)] sm:p-5 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12 lg:p-6"
         >
           <>
-            {/* LEFT — heading + CTAs */}
+            {/* LEFT â€” heading + CTAs */}
             <div className="rounded-[2rem] border border-primary/15 bg-soft p-6 sm:p-8 lg:p-9">
               <p className="eyebrow">Book Appointment</p>
               <h2 className="section-heading mt-4 text-3xl sm:text-4xl">
@@ -139,7 +139,7 @@ export default function Appointment() {
               </div>
             </div>
 
-            {/* RIGHT — form */}
+            {/* RIGHT â€” form */}
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.97 }}
@@ -318,11 +318,11 @@ export default function Appointment() {
                       className={`${inputClass} appearance-none pl-10 ${errors.time ? "border-red-400" : ""}`}
                     >
                       <option value="">Select a time slot</option>
-                      <option value="Morning (9:00 AM – 12:30 PM)">
-                        Morning (9:00 AM – 12:30 PM)
+                      <option value="Morning (9:00 AM â€“ 12:30 PM)">
+                        Morning (9:00 AM â€“ 12:30 PM)
                       </option>
-                      <option value="Evening (5:30 PM – 9:00 PM)">
-                        Evening (5:30 PM – 9:00 PM)
+                      <option value="Evening (5:30 PM â€“ 9:00 PM)">
+                        Evening (5:30 PM â€“ 9:00 PM)
                       </option>
                     </select>
                   </div>
@@ -336,7 +336,7 @@ export default function Appointment() {
                   <textarea
                     id="message"
                     rows={3}
-                    placeholder="Briefly describe your concern…"
+                    placeholder="Briefly describe your concernâ€¦"
                     value={form.message}
                     onChange={update("message")}
                     className={`${inputClass} resize-none`}

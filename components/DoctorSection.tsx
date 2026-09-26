@@ -1,43 +1,46 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Transition, type Variants } from "framer-motion";
 import { GraduationCap, ArrowRight, Stethoscope } from "lucide-react";
 import { doctor } from "@/data/doctor";
 import { EASE } from "@/lib/animations";
 
 export default function DoctorSection() {
+  /**
+   * Slide-in only. Opacity is never animated, so the copy keeps its full
+   * contrast at every viewport instead of fading in from transparent.
+   */
+  const slide = (from: { x?: number; y?: number }, transition: Transition): Variants => ({
+    hidden: { ...from },
+    visible: { x: 0, y: 0, transition },
+  });
+
   return (
     <section id="about" className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
       {/* Soft orange corner wash */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-soft blur-3xl"
+        className="pointer-events-none absolute top-0 right-0 z-0 h-96 w-96 rounded-full bg-soft blur-3xl"
       />
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1fr] lg:gap-16 lg:px-8">
-        {/* LEFT — doctor information (fade from left) */}
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1fr] lg:gap-16 lg:px-8">
+        {/* LEFT â€” doctor information (fade from left) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
         >
           <motion.p
-            variants={{
-              hidden: { opacity: 0, x: -24 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.65, ease: EASE } },
-            }}
+            variants={slide({ x: -24 }, { duration: 0.65, ease: EASE })}
             className="eyebrow"
           >
             {doctor.label}
           </motion.p>
 
           <motion.h2
-            variants={{
-              hidden: { opacity: 0, x: -26 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: EASE, delay: 0.06 } },
-            }}
+            variants={slide({ x: -26 }, { duration: 0.7, ease: EASE, delay: 0.06 })}
             className="section-heading mt-4 text-3xl text-ink sm:text-4xl lg:text-[2.6rem]"
           >
             {doctor.name}
@@ -54,11 +57,8 @@ export default function DoctorSection() {
             {doctor.credentials.map((credential) => (
               <motion.li
                 key={credential}
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: EASE } },
-                }}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-very-soft px-3.5 py-1.5 text-[13px] font-medium text-primary-dark"
+                variants={slide({ y: 12 }, { duration: 0.45, ease: EASE })}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-very-soft px-3.5 py-1.5 text-[13px] font-medium text-ink"
               >
                 <GraduationCap className="size-3.5" aria-hidden="true" />
                 {credential}
@@ -67,21 +67,15 @@ export default function DoctorSection() {
           </motion.ul>
 
           <motion.p
-            variants={{
-              hidden: { opacity: 0, x: -22 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.65, ease: EASE, delay: 0.14 } },
-            }}
-            className="mt-6 max-w-xl leading-relaxed text-muted"
+            variants={slide({ x: -22 }, { duration: 0.65, ease: EASE, delay: 0.14 })}
+            className="mt-6 max-w-xl leading-relaxed text-ink/80"
           >
             {doctor.description}
           </motion.p>
 
           {/* Areas of Expertise */}
           <motion.h3
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: EASE, delay: 0.18 } },
-            }}
+            variants={slide({ x: -20 }, { duration: 0.6, ease: EASE, delay: 0.18 })}
             className="mt-9 text-xl font-semibold tracking-tight text-ink"
           >
             {doctor.expertiseHeading}
@@ -96,10 +90,7 @@ export default function DoctorSection() {
             {doctor.expertise.map((area) => (
               <motion.li
                 key={area}
-                variants={{
-                  hidden: { opacity: 0, x: -18 },
-                  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: EASE } },
-                }}
+                variants={slide({ x: -18 }, { duration: 0.5, ease: EASE })}
                 className="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3.5 shadow-[0_1px_2px_rgba(29,41,57,0.04)]"
               >
                 <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-soft text-primary-dark">
@@ -111,10 +102,7 @@ export default function DoctorSection() {
           </motion.ul>
 
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.28 } },
-            }}
+            variants={slide({ y: 18 }, { duration: 0.6, ease: EASE, delay: 0.28 })}
             className="mt-9"
           >
             <Link
@@ -127,11 +115,11 @@ export default function DoctorSection() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT — dd-1.jpg as the about section image */}
+        {/* RIGHT â€” dd-1.jpg as the about section image */}
         <motion.div
-          initial={{ opacity: 0, x: 56 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          initial={{ x: 56 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.85, ease: EASE, delay: 0.1 }}
           className="relative mx-auto w-full max-w-lg lg:order-first lg:max-w-none"
         >
@@ -152,8 +140,8 @@ export default function DoctorSection() {
           </figure>
           {/* Floating experience badge */}
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 18 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE, delay: 0.4 }}
             className="absolute -bottom-5 left-5 flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-[0_16px_36px_-12px_rgba(29,41,57,0.3)]"

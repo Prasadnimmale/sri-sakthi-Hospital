@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,13 +9,13 @@ import { contact, tel } from "@/data/contact";
 
 /** Asymmetric spans so cards never look identical. */
 const spans = [
-  "lg:col-span-4", // Outpatient — wide
-  "lg:col-span-5", // Inpatient — extra tall emphasis
-  "lg:col-span-3", // Day Care — narrow
-  "lg:col-span-3", // Diagnostics — narrow
-  "lg:col-span-4", // Pharmacy — medium
-  "lg:col-span-5", // IV Therapy — medium
-  "lg:col-span-12", // Emergency — full-width strip
+  "lg:col-span-4", // Outpatient â€” wide
+  "lg:col-span-5", // Inpatient â€” extra tall emphasis
+  "lg:col-span-3", // Day Care â€” narrow
+  "lg:col-span-3", // Diagnostics â€” narrow
+  "lg:col-span-4", // Pharmacy â€” medium
+  "lg:col-span-5", // IV Therapy â€” medium
+  "lg:col-span-12", // Emergency â€” full-width strip
 ];
 
 export default function Services() {
@@ -29,7 +29,7 @@ export default function Services() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="max-w-2xl"
         >
@@ -57,7 +57,7 @@ export default function Services() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
           className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5"
         >
@@ -74,7 +74,7 @@ export default function Services() {
                 transition={{ duration: 0.25 }}
                 className={`group relative overflow-hidden rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_10px_30px_-18px_rgba(29,41,57,0.18)] transition-shadow duration-300 hover:shadow-[0_2px_4px_rgba(29,41,57,0.05),0_22px_44px_-16px_rgba(232,117,36,0.28)] sm:p-7 ${spans[i]}`}
               >
-                {/* Orange accent line — grows on hover */}
+                {/* Orange accent line â€” grows on hover */}
                 <span
                   aria-hidden="true"
                   className="absolute inset-x-6 top-0 h-[3px] origin-left scale-x-0 rounded-b-full bg-primary transition-transform duration-300 group-hover:scale-x-100"

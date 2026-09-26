@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { HeartHandshake, Crosshair, ShieldCheck } from "lucide-react";
@@ -11,11 +11,11 @@ export default function WelcomeSection() {
   return (
     <section id="welcome" className="relative bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:gap-16 lg:px-8">
-        {/* LEFT — welcome content */}
+        {/* LEFT â€” welcome content */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
         >
           <motion.p
@@ -79,11 +79,11 @@ export default function WelcomeSection() {
           </div>
         </motion.div>
 
-        {/* RIGHT — bento stats */}
+        {/* RIGHT â€” bento stats */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } } }}
           className="grid grid-cols-2 gap-4 lg:gap-5"
         >

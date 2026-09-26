@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -49,8 +49,8 @@ export default function AboutDoctor() {
         >
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 16 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+              hidden: { y: 16 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
             }}
             className="eyebrow justify-center"
           >
@@ -58,8 +58,8 @@ export default function AboutDoctor() {
           </motion.p>
           <motion.h1
             variants={{
-              hidden: { opacity: 0, y: 22 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+              hidden: { y: 22 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE } },
             }}
             className="section-heading mt-4 text-3xl sm:text-4xl lg:text-[2.6rem]"
           >
@@ -67,8 +67,8 @@ export default function AboutDoctor() {
           </motion.h1>
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.65, ease: EASE } },
             }}
             className="mt-5 leading-relaxed text-muted"
           >
@@ -79,8 +79,8 @@ export default function AboutDoctor() {
         {/* Photo (left) + Credentials (right) */}
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: -40 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
             className="relative mx-auto w-full max-w-md lg:max-w-none"
           >
@@ -99,8 +99,8 @@ export default function AboutDoctor() {
               />
             </figure>
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 18 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.4 }}
               className="absolute -bottom-6 -right-5 flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-[0_16px_36px_-12px_rgba(29,41,57,0.3)]"
             >
@@ -125,8 +125,8 @@ export default function AboutDoctor() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: 40 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.18 }}
           >
             <span className="eyebrow">{doctor.label}</span>
@@ -135,14 +135,14 @@ export default function AboutDoctor() {
               {doctor.credentials.map((credential) => (
                 <span
                   key={credential}
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-primary-dark shadow-[0_1px_2px_rgba(29,41,57,0.05)]"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-ink shadow-[0_1px_2px_rgba(29,41,57,0.05)]"
                 >
                   <GraduationCap className="size-4 shrink-0" aria-hidden="true" />
                   {credential}
                 </span>
               ))}
             </div>
-            <p className="mt-6 max-w-lg leading-relaxed text-muted">
+            <p className="mt-6 max-w-lg leading-relaxed text-ink/80">
               {doctor.description}
             </p>
           </motion.div>
@@ -152,7 +152,7 @@ export default function AboutDoctor() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="relative mt-16 overflow-hidden rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_14px_32px_-18px_rgba(29,41,57,0.2)] sm:p-10"
         >
@@ -178,7 +178,7 @@ export default function AboutDoctor() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="mt-16"
         >
@@ -217,7 +217,7 @@ export default function AboutDoctor() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -6 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE }}
             className="rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_14px_32px_-18px_rgba(29,41,57,0.2)] transition-shadow duration-300 hover:shadow-[0_2px_4px_rgba(29,41,57,0.05),0_24px_48px_-18px_rgba(232,117,36,0.3)] sm:p-8"
           >
@@ -245,7 +245,7 @@ export default function AboutDoctor() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -6 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
             className="rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_14px_32px_-18px_rgba(29,41,57,0.2)] transition-shadow duration-300 hover:shadow-[0_2px_4px_rgba(29,41,57,0.05),0_24px_48px_-18px_rgba(232,117,36,0.3)] sm:p-8"
           >

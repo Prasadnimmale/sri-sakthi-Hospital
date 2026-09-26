@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -71,7 +71,7 @@ export default function HospitalSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="mx-auto max-w-2xl text-center"
         >
@@ -107,7 +107,7 @@ export default function HospitalSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="mt-12 grid gap-5 lg:grid-cols-2"
         >
@@ -220,7 +220,7 @@ export default function HospitalSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.09 } } }}
           className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
         >
@@ -331,7 +331,7 @@ export default function HospitalSection() {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mx-auto mt-8 max-w-2xl text-center text-[1.05rem] leading-relaxed text-muted"
         >
@@ -341,7 +341,7 @@ export default function HospitalSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
           className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
@@ -450,7 +450,7 @@ export default function HospitalSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
           className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
