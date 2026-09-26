@@ -77,8 +77,8 @@ export default function HospitalSection() {
         >
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
             }}
             className="eyebrow justify-center"
           >
@@ -86,8 +86,8 @@ export default function HospitalSection() {
           </motion.p>
           <motion.h2
             variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+              hidden: { y: 20 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE } },
             }}
             className="section-heading text-3xl sm:text-4xl lg:text-[2.6rem]"
           >
@@ -95,8 +95,8 @@ export default function HospitalSection() {
           </motion.h2>
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.08 } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.08 } },
             }}
             className="mt-4 text-[1.05rem] leading-relaxed text-muted"
           >
@@ -115,8 +115,8 @@ export default function HospitalSection() {
             <motion.article
               key={item.title}
               variants={{
-                hidden: { opacity: 0, y: 26 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+                hidden: { y: 26 },
+                visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
               }}
               className="group cursor-pointer rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_10px_28px_-16px_rgba(29,41,57,0.16)] transition-shadow duration-300 hover:shadow-[0_2px_4px_rgba(29,41,57,0.05),0_20px_40px_-16px_rgba(232,117,36,0.25)] sm:p-7"
             >
@@ -228,8 +228,8 @@ export default function HospitalSection() {
             <motion.figure
               key={photo.src}
               variants={{
-                hidden: { opacity: 0, y: 26 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+                hidden: { y: 26 },
+                visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
               }}
               onClick={() => setActive(photo)}
               onKeyDown={(event) => {
@@ -329,8 +329,8 @@ export default function HospitalSection() {
         </AnimatePresence>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ }}
+          whileInView={{ }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mx-auto mt-8 max-w-2xl text-center text-[1.05rem] leading-relaxed text-muted"
@@ -351,8 +351,8 @@ export default function HospitalSection() {
               <motion.article
                 key={facility.title}
                 variants={{
-                  hidden: { opacity: 0, y: 28 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+                  hidden: { y: 28 },
+                  visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
                 }}
                 onClick={() => setActiveFacility(facility)}
                 onKeyDown={(event) => {
@@ -460,8 +460,8 @@ export default function HospitalSection() {
               <motion.article
                 key={strength.title}
                 variants={{
-                  hidden: { opacity: 0, y: 28 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+                  hidden: { y: 28 },
+                  visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
                 }}
                 onClick={() => setActiveStrength(strength)}
                 onKeyDown={(event) => {

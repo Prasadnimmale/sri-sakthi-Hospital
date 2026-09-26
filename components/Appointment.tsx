@@ -83,8 +83,8 @@ export default function Appointment() {
       <div aria-hidden="true" className="cross-texture absolute inset-x-0 top-0 h-40 opacity-60" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 26 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="grid gap-8 overflow-hidden rounded-[2.25rem] border border-line bg-white p-3 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_24px_60px_-30px_rgba(232,117,36,0.3)] sm:p-5 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12 lg:p-6"

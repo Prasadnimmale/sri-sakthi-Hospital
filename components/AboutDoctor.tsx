@@ -150,8 +150,8 @@ export default function AboutDoctor() {
 
         {/* Professional Philosophy */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="relative mt-16 overflow-hidden rounded-3xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(29,41,57,0.04),0_14px_32px_-18px_rgba(29,41,57,0.2)] sm:p-10"
@@ -176,8 +176,8 @@ export default function AboutDoctor() {
 
         {/* Qualifications & Expertise */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="mt-16"
@@ -214,8 +214,8 @@ export default function AboutDoctor() {
         {/* Training & Certifications + Achievements */}
         <div className="mt-16 grid gap-5 lg:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 30 }}
+            whileInView={{ y: 0 }}
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE }}
@@ -242,8 +242,8 @@ export default function AboutDoctor() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 30 }}
+            whileInView={{ y: 0 }}
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
@@ -272,8 +272,8 @@ export default function AboutDoctor() {
 
         {/* Book appointment CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE }}
           className="mt-16 text-center"

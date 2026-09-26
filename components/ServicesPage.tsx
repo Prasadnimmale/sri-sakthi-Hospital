@@ -55,8 +55,8 @@ export default function ServicesPage() {
         >
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 16 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+              hidden: { y: 16 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
             }}
             className="eyebrow justify-center"
           >
@@ -64,8 +64,8 @@ export default function ServicesPage() {
           </motion.p>
           <motion.h1
             variants={{
-              hidden: { opacity: 0, y: 22 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+              hidden: { y: 22 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE } },
             }}
             className="section-heading mt-4 text-3xl sm:text-4xl lg:text-[2.6rem]"
           >
@@ -73,8 +73,8 @@ export default function ServicesPage() {
           </motion.h1>
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.65, ease: EASE } },
             }}
             className="mt-5 leading-relaxed text-muted"
           >
@@ -84,8 +84,8 @@ export default function ServicesPage() {
 
         {/* Core services */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
           className="mt-14"
         >
@@ -148,8 +148,8 @@ export default function ServicesPage() {
 
         {/* Conditions we treat */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
           className="mt-16"
@@ -204,8 +204,8 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE }}
           className="mt-16 flex flex-col items-center justify-center gap-4 rounded-3xl border border-primary/20 bg-gradient-to-br from-soft to-white p-8 text-center shadow-[0_14px_32px_-18px_rgba(232,117,36,0.35)] sm:flex-row sm:gap-5 sm:p-10"

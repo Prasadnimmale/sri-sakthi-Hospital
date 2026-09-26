@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -26,18 +26,18 @@ export default function Hero() {
       className="hero-bg relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:min-h-[92vh] lg:pt-36 lg:pb-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* LEFT — content */}
+        {/* LEFT â€” content */}
         <motion.div
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.12, delayChildren: 0.05 }}
           className="relative z-10 max-w-xl"
         >
-          {/* Eyebrow: Listening • Caring • Healing */}
+          {/* Eyebrow: Listening â€¢ Caring â€¢ Healing */}
           <motion.div
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
             }}
             className="flex flex-wrap items-center gap-x-3 gap-y-1"
             aria-label="Listening, Caring, Healing"
@@ -56,8 +56,8 @@ export default function Hero() {
 
           <motion.h1
             variants={{
-              hidden: { opacity: 0, y: 26 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE, delay: 0.08 } },
+              hidden: { y: 26 },
+              visible: { y: 0, transition: { duration: 0.75, ease: EASE, delay: 0.08 } },
             }}
             className="mt-5 text-[2.5rem] leading-[1.08] font-bold tracking-tight text-ink sm:text-5xl lg:text-[3.6rem]"
           >
@@ -74,8 +74,8 @@ export default function Hero() {
 
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 22 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.18 } },
+              hidden: { y: 22 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.18 } },
             }}
             className="mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-muted"
           >
@@ -86,7 +86,7 @@ export default function Hero() {
           <motion.div
             variants={{
               hidden: {},
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.28 } },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.28 } },
             }}
             className="mt-8 flex flex-wrap items-center gap-4"
           >
@@ -121,8 +121,8 @@ export default function Hero() {
                 <motion.li
                   key={item}
                   variants={{
-                    hidden: { opacity: 0, y: 14 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+                    hidden: { y: 14 },
+                    visible: { y: 0, transition: { duration: 0.5, ease: EASE } },
                   }}
                 >
                   <button
@@ -140,7 +140,7 @@ export default function Hero() {
           </motion.ul>
         </motion.div>
 
-        {/* RIGHT — doctor photo in a circle (in-flow centered on mobile, right-anchored on desktop) */}
+        {/* RIGHT â€” doctor photo in a circle (in-flow centered on mobile, right-anchored on desktop) */}
         <motion.div
           initial={{ x: 64 }}
           animate={{ x: 0 }}

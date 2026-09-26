@@ -20,8 +20,8 @@ export default function WelcomeSection() {
         >
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE } },
             }}
             className="eyebrow"
           >
@@ -30,8 +30,8 @@ export default function WelcomeSection() {
 
           <motion.h2
             variants={{
-              hidden: { opacity: 0, y: 22 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.06 } },
+              hidden: { y: 22 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.06 } },
             }}
             className="section-heading mt-4 max-w-xl text-3xl sm:text-4xl lg:text-[2.6rem]"
           >
@@ -42,8 +42,8 @@ export default function WelcomeSection() {
             <motion.p
               key={para.slice(0, 24)}
               variants={{
-                hidden: { opacity: 0, y: 18 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.12 + i * 0.08 } },
+                hidden: { y: 18 },
+                visible: { y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.12 + i * 0.08 } },
               }}
               className="mt-5 max-w-xl leading-relaxed text-muted"
             >
@@ -59,8 +59,8 @@ export default function WelcomeSection() {
                 <motion.div
                   key={feature.title}
                   variants={{
-                    hidden: { opacity: 0, x: -22 },
-                    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: EASE, delay: 0.1 + i * 0.1 } },
+                    hidden: { x: -22 },
+                    visible: { x: 0, transition: { duration: 0.6, ease: EASE, delay: 0.1 + i * 0.1 } },
                   }}
                   className="flex items-start gap-4"
                 >
@@ -91,7 +91,7 @@ export default function WelcomeSection() {
             <motion.div
               key={stat.label}
               variants={{
-                hidden: { opacity: 0, y: 26, scale: 0.97 },
+                hidden: { y: 26, scale: 0.97 },
                 visible: {
                   opacity: 1,
                   y: 0,

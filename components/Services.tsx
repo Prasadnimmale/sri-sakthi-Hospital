@@ -35,8 +35,8 @@ export default function Services() {
         >
           <motion.h2
             variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+              hidden: { y: 20 },
+              visible: { y: 0, transition: { duration: 0.7, ease: EASE } },
             }}
             className="section-heading text-3xl sm:text-4xl lg:text-[2.6rem]"
           >
@@ -44,8 +44,8 @@ export default function Services() {
           </motion.h2>
           <motion.p
             variants={{
-              hidden: { opacity: 0, y: 18 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.08 } },
+              hidden: { y: 18 },
+              visible: { y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.08 } },
             }}
             className="mt-4 text-[1.05rem] leading-relaxed text-muted"
           >
@@ -67,8 +67,8 @@ export default function Services() {
               <motion.article
                 key={service.name}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE } },
+                  hidden: { y: 30 },
+                  visible: { y: 0, transition: { duration: 0.65, ease: EASE } },
                 }}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25 }}
@@ -117,8 +117,8 @@ export default function Services() {
 
         {/* View all services */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE }}
           className="mt-10 text-center"

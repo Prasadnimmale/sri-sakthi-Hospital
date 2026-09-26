@@ -18,8 +18,8 @@ export default function Contact() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         {/* Contact details â€” slide in from right on desktop */}
         <motion.div
-          initial={{ opacity: 0, x: 36 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ x: 36 }}
+          whileInView={{ x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.75, ease: EASE }}
           className="lg:order-2"
@@ -113,8 +113,8 @@ export default function Contact() {
 
         {/* Map + directions â€” fade in */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.75, ease: EASE, delay: 0.1 }}
           className="lg:order-1"
