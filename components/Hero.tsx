@@ -147,15 +147,9 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
           className="pointer-events-none mt-12 flex flex-col items-center lg:pointer-events-auto lg:absolute lg:inset-y-0 lg:right-40 lg:mt-0 lg:translate-y-5 lg:justify-center xl:right-56"
         >
-          <div className="mb-6 flex flex-col items-center text-center">
-            <span className="eyebrow">{doctor.label}</span>
-            <h2 className="mt-3 text-xl font-semibold tracking-tight text-ink sm:text-2xl">
-              {doctor.name}
-            </h2>
-          </div>
-          <div className="relative flex size-[260px] items-center justify-center sm:size-[330px] lg:size-[455px] xl:size-[530px]">
+          <div className="relative flex size-[196px] items-center justify-center sm:size-[330px] lg:size-[455px] xl:size-[530px]">
             <div
-              className="absolute left-1/2 top-1/2 size-[220px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full shadow-[0_40px_80px_-24px_rgba(29,41,57,0.35)] ring-8 ring-white sm:size-[280px] lg:size-[400px] xl:size-[470px]"
+              className="absolute left-1/2 top-1/2 size-[164px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full shadow-[0_40px_80px_-24px_rgba(29,41,57,0.35)] ring-8 ring-white sm:size-[280px] lg:size-[400px] xl:size-[470px]"
               style={{
                 backgroundImage: `url(${doctor.images.hero})`,
                 backgroundSize: "150%",
@@ -176,7 +170,7 @@ export default function Hero() {
                   hidden: { y: 12 },
                   visible: { y: 0, transition: { duration: 0.45, ease: EASE } },
                 }}
-                className={`inline-flex items-center justify-center rounded-full border border-primary/20 bg-white px-3 py-2 text-center text-sm font-semibold tracking-tight text-primary-dark shadow-[0_6px_18px_-8px_rgba(232,117,36,0.35)] sm:text-[15px] ${index === 4 ? "col-span-2" : ""}`}
+                className={`inline-flex min-w-[92px] items-center justify-center rounded-full border border-primary/20 bg-white px-3 py-2 text-center text-sm font-semibold tracking-tight text-primary-dark shadow-[0_6px_18px_-8px_rgba(232,117,36,0.35)] sm:min-w-[112px] sm:text-[15px] ${index === 4 ? "col-span-2" : ""}`}
               >
                 {credential}
               </motion.span>
