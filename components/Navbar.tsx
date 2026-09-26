@@ -33,13 +33,23 @@ export default function Navbar() {
     };
   }, [open]);
 
+  // Escape closes the mobile drawer
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <nav
         aria-label="Primary"
         className={`mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 transition-all duration-300 sm:px-6 lg:px-8 ${
           scrolled
-            ? "mt-2 rounded-2xl border border-line/70 bg-white py-2 shadow-[0_10px_30px_-12px_rgba(29,41,57,0.15)] sm:mx-4 lg:mx-auto"
+            ? "mx-3 mt-2 rounded-2xl border border-line/70 bg-white py-2 shadow-[0_10px_30px_-12px_rgba(29,41,57,0.15)] sm:mx-4 lg:mx-auto"
             : "bg-transparent py-4"
         }`}
       >
@@ -105,7 +115,7 @@ export default function Navbar() {
             className="absolute inset-0 bg-ink/40"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute inset-x-3 top-3 rounded-3xl border border-line bg-white p-5 shadow-xl">
+          <div className="absolute inset-x-3 top-3 max-h-[calc(100dvh-1.5rem)] overflow-y-auto overscroll-contain rounded-3xl border border-line bg-white p-5 shadow-xl">
             <div className="flex items-center justify-between">
               <Logo />
               <button
