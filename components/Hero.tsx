@@ -23,7 +23,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="hero-bg relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:min-h-[92vh] lg:pt-36 lg:pb-20"
+      className="hero-bg relative overflow-hidden pt-32 pb-16 lg:min-h-[92vh] lg:pt-36 lg:pb-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* LEFT â€” content */}

@@ -19,12 +19,18 @@
   --shadow-frame: 0 24px 60px -18px rgba(29, 41, 57, 0.22);
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 96px;
-  font-optical-sizing: auto;
-  font-variation-settings: "GRAD" 0;
-}
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 112px;
+    font-optical-sizing: auto;
+    font-variation-settings: "GRAD" 0;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 96px;
+    }
+  }
 
 body {
   font-family: var(--font-sans);
@@ -34,7 +40,14 @@ body {
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: clip;
+}
+
+/* Root-level horizontal overflow guard: the page must never scroll sideways. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {

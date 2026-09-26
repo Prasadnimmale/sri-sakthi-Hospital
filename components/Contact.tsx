@@ -14,7 +14,10 @@ import { EASE } from "@/lib/animations";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-gradient-to-b from-white to-very-soft py-20 sm:py-24 lg:py-28">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-gradient-to-b from-white to-very-soft py-20 sm:py-24 lg:py-28"
+    >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         {/* Contact details â€” slide in from right on desktop */}
         <motion.div

@@ -9,7 +9,7 @@ const featureIcons = [HeartHandshake, Crosshair, ShieldCheck];
 
 export default function WelcomeSection() {
   return (
-    <section id="welcome" className="relative bg-white py-20 sm:py-24 lg:py-28">
+    <section id="welcome" className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:gap-16 lg:px-8">
         {/* LEFT â€” welcome content */}
         <motion.div

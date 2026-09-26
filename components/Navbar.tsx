@@ -44,18 +44,25 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50 w-full max-w-full box-border">
       <nav
         aria-label="Primary"
-        className={`mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 transition-all duration-300 sm:px-6 lg:px-8 ${
+        className={`mx-auto box-border flex w-full max-w-7xl items-center justify-between gap-3 px-4 transition-all duration-300 sm:gap-4 sm:px-6 lg:px-8 ${
           scrolled
-            ? "mx-3 mt-2 rounded-2xl border border-line/70 bg-white py-2 shadow-[0_10px_30px_-12px_rgba(29,41,57,0.15)] sm:mx-4 lg:mx-auto"
-            : "bg-transparent py-4"
+            ? "mx-3 mt-2 rounded-2xl border border-line/70 bg-white py-2.5 shadow-[0_10px_30px_-12px_rgba(29,41,57,0.15)] sm:mx-4 sm:py-2 lg:mx-auto"
+            : "bg-transparent py-5 sm:py-4"
         }`}
       >
-        <Link href="/" aria-label="Sri Sakthi Hospital — Home" className="inline-flex">
-          <Logo />
-        </Link>
+        {/* Left: logo + hospital name */}
+        <div className="min-w-0 flex-1">
+          <Link
+            href="/"
+            aria-label="Sri Sakthi Hospital — Home"
+            className="inline-flex min-w-0 max-w-full"
+          >
+            <Logo prominent />
+          </Link>
+        </div>
 
         {/* Center links (desktop) */}
         <ul className="hidden items-center gap-7 lg:flex">
@@ -86,12 +93,12 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile: call + hamburger */}
-        <div className="flex items-center gap-2 lg:hidden">
+        {/* Right: phone + hamburger, fixed row, never compressed */}
+        <div className="ml-2 flex shrink-0 items-center gap-2 lg:hidden">
           <CallNowButton
             aria-label="Call Sri Sakthi Hospital"
-            className="grid size-10 place-items-center rounded-full border border-line bg-white text-primary-dark"
-            iconClassName="size-[18px]"
+            className="grid size-11 shrink-0 place-items-center rounded-full border border-line bg-white text-primary-dark sm:size-10"
+            iconClassName="size-5 shrink-0 sm:size-[18px]"
             children={null}
           />
           <button
@@ -99,9 +106,9 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
             aria-expanded={open}
-            className="grid size-10 place-items-center rounded-full border border-line bg-white text-ink"
+            className="grid size-11 shrink-0 place-items-center rounded-full border border-line bg-white text-ink sm:size-10"
           >
-            <Menu className="size-5" aria-hidden="true" />
+            <Menu className="size-[22px] shrink-0 sm:size-5" aria-hidden="true" />
           </button>
         </div>
       </nav>
